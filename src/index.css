@@ -1,1 +1,67 @@
 @import "tailwindcss";
+
+@theme {
+  /* Paleta pastel Fresalicius */
+  --color-pastel-pink: #fce4ec;
+  --color-pastel-rose: #f8bbd0;
+  --color-pastel-magenta: #f06292;
+  --color-pastel-hot: #e91e90;
+  --color-pastel-cream: #fff5f7;
+  --color-pastel-lavender: #f3e5f5;
+  --color-pastel-peach: #ffe0e6;
+  --color-pastel-white: #fffafb;
+  --color-pastel-dark: #4a1942;
+  --color-pastel-text: #5d2a5a;
+  --color-pastel-gold: #d4a574;
+  --color-pastel-mint: #e8f5e9;
+
+  /* Fuentes */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Poppins", sans-serif;
+  --font-script: "Dancing Script", cursive;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-pastel-white);
+  color: var(--color-pastel-text);
+}
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
