@@ -65,3 +65,59 @@ body {
 .animate-pulse-soft {
   animation: pulse-soft 2s ease-in-out infinite;
 }
+
+/* Text stroke / outline styles */
+.text-stroke-pink {
+  color: white;
+  -webkit-text-stroke: 4px #e91e90;
+  paint-order: stroke fill;
+  text-shadow:
+    0 0 8px rgba(233, 30, 144, 0.2),
+    3px 3px 0 rgba(233, 30, 144, 0.1),
+    -1px -1px 0 rgba(233, 30, 144, 0.1);
+}
+
+.text-stroke-gray {
+  color: white;
+  -webkit-text-stroke: 3px #8a8a8a;
+  paint-order: stroke fill;
+  text-shadow:
+    0 0 6px rgba(138, 138, 138, 0.2),
+    2px 2px 0 rgba(138, 138, 138, 0.1);
+}
+
+/* Responsive stroke width */
+@media (min-width: 640px) {
+  .text-stroke-pink {
+    -webkit-text-stroke: 5px #e91e90;
+  }
+  .text-stroke-gray {
+    -webkit-text-stroke: 4px #8a8a8a;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-stroke-pink {
+    -webkit-text-stroke: 6px #e91e90;
+  }
+  .text-stroke-gray {
+    -webkit-text-stroke: 4.5px #8a8a8a;
+  }
+}
+
+/* Slide in from left animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  opacity: 0;
+  animation: slideInLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
