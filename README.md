@@ -1,8 +1,8 @@
 # Fresalicius - Landing Page
 
-Landing page para **Fresalicius by Mel Campero**, un emprendimiento de reposteria artesanal.
+Landing page para **Fresalicius by Mel Campero**, un emprendimiento de repostería artesanal ubicado en Cochabamba, Bolivia.
 
-## Tecnologias
+## Tecnologías
 
 - React 19
 - Vite 7
@@ -11,16 +11,28 @@ Landing page para **Fresalicius by Mel Campero**, un emprendimiento de reposteri
 ## Estructura
 
 ```
+public/
+  images/
+    cheesecake/       - Imagen de cheesecake
+    cupcake/          - Imagen de cupcakes
+    fresaschocolate/  - Imagen de fresas con chocolate
+    pay/              - Imagen de pay
+    postre/           - Imagen de postre
+    postrevaso/       - Imagen de postre en vasito
+    roscas/           - Imagen de roscas
+    spam/             - Imagen de fondo para hero
+    tortas/           - Imágenes de tortas
+    tortastematicas/  - Imágenes de tortas temáticas
+    *.svg             - Iconos SVG de redes sociales
 src/
   components/
-    Navbar.jsx        - Navegacion fija responsive
-    Hero.jsx          - Seccion principal con embed de Canva
-    About.jsx         - Seccion sobre nosotros
-    Products.jsx      - Catalogo de productos
-    Gallery.jsx       - Galeria de creaciones
-    Testimonials.jsx  - Testimonios de clientes
-    Contact.jsx       - Formulario de contacto e info
-    Footer.jsx        - Pie de pagina
+    Navbar.jsx        - Navegación fija responsive
+    Hero.jsx          - Sección principal con fondo difuminado
+    About.jsx         - Sección sobre nosotros
+    Products.jsx      - Catálogo de productos con imágenes
+    Gallery.jsx       - Galería de creaciones con fotos reales
+    Contact.jsx       - Info de contacto y horarios
+    Footer.jsx        - Pie de página con iconos SVG
   App.jsx             - Componente principal
   index.css           - Estilos globales y paleta de colores
   main.jsx            - Punto de entrada
