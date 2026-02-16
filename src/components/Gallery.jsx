@@ -1,12 +1,12 @@
 const images = [
-  { emoji: "🎂", label: "Torta de cumpleaños", color: "from-pastel-pink to-pastel-rose" },
-  { emoji: "🧁", label: "Cupcakes artísticos", color: "from-pastel-lavender to-pastel-pink" },
-  { emoji: "🍓", label: "Fresas con chocolate", color: "from-pastel-peach to-pastel-pink" },
-  { emoji: "🍰", label: "Cheesecake especial", color: "from-pastel-mint to-pastel-lavender" },
-  { emoji: "🍪", label: "Galletas decoradas", color: "from-pastel-pink to-pastel-peach" },
-  { emoji: "🎀", label: "Postres temáticos", color: "from-pastel-rose to-pastel-lavender" },
-  { emoji: "🍡", label: "Cake pops", color: "from-pastel-lavender to-pastel-rose" },
-  { emoji: "🫧", label: "Postres en vasito", color: "from-pastel-peach to-pastel-mint" },
+  { src: "/images/tortas/torta.jpeg", label: "Torta de cumpleaños" },
+  { src: "/images/cupcake/cupcake.jpg", label: "Cupcakes artísticos" },
+  { src: "/images/fresaschocolate/fresaschocolate.jpeg", label: "Fresas con chocolate" },
+  { src: "/images/cheesecake/cheesecake.jpg", label: "Cheesecake especial" },
+  { src: "/images/postre/postre.jpeg", label: "Postres" },
+  { src: "/images/roscas/rosca.jpeg", label: "Roscas" },
+  { src: "/images/pay/pay.jpeg", label: "Pay" },
+  { src: "/images/postrevaso/postrevaso.jpg", label: "Postres en vasito" },
 ];
 
 export default function Gallery() {
@@ -31,11 +31,13 @@ export default function Gallery() {
           {images.map((item, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br ${item.color} rounded-2xl overflow-hidden aspect-square flex items-center justify-center shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+              className="group relative rounded-2xl overflow-hidden aspect-square shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer"
             >
-              <span className="text-6xl sm:text-7xl transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12">
-                {item.emoji}
-              </span>
+              <img
+                src={item.src}
+                alt={item.label}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
               {/* Overlay on hover */}
               <div className="absolute inset-0 bg-pastel-dark/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
@@ -51,10 +53,10 @@ export default function Gallery() {
         <div className="text-center mt-12">
           <p className="text-pastel-text/60 text-sm mb-3">Síguenos para ver más de nuestras creaciones</p>
           <a
-            href="#"
+            href="https://www.instagram.com/fresalicius_by_mel_campero/"
             className="inline-flex items-center gap-2 text-pastel-hot font-semibold hover:text-pastel-magenta transition-colors text-lg"
           >
-            📸 @fresalicius
+            <img src="/images/instagram-icon.svg" alt="Instagram" className="w-5 h-5 inline" /> @fresalicius
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
