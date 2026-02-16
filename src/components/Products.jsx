@@ -1,51 +1,45 @@
 const products = [
   {
-    name: "Torta de Fresas",
+    name: "Tortas",
     description: "Bizcocho suave con crema de fresas naturales y decoración artesanal.",
     price: "Desde Bs. 120",
-    emoji: "🍓",
+    image: "/images/tortas/torta1.jpeg",
     tag: "Popular",
-    bg: "from-pastel-pink to-pastel-peach",
-  },
-  {
-    name: "Cupcakes Decorados",
-    description: "Set de 6 cupcakes con diseños personalizados para cualquier ocasión.",
-    price: "Desde Bs. 60",
-    emoji: "🧁",
-    tag: "Favorito",
-    bg: "from-pastel-lavender to-pastel-pink",
-  },
-  {
-    name: "Torta Temática",
-    description: "Torta personalizada con la temática de tu elección, ideal para cumpleaños.",
-    price: "Desde Bs. 180",
-    emoji: "🎂",
-    tag: "Premium",
-    bg: "from-pastel-peach to-pastel-rose",
-  },
-  {
-    name: "Cake Pops",
-    description: "Bolitas de pastel cubiertas de chocolate con decoraciones únicas.",
-    price: "Desde Bs. 40",
-    emoji: "🍡",
-    tag: "Nuevo",
-    bg: "from-pastel-mint to-pastel-pink",
-  },
-  {
-    name: "Galletas Decoradas",
-    description: "Galletas artesanales con glaseado real y diseños personalizados.",
-    price: "Desde Bs. 45",
-    emoji: "🍪",
-    tag: "Especial",
-    bg: "from-pastel-pink to-pastel-lavender",
   },
   {
     name: "Postre en Vasito",
-    description: "Deliciosas capas de crema, fruta y bizcocho en presentación individual.",
+    description: "Set de 6 cupcakes con diseños personalizados para cualquier ocasión.",
+    price: "Desde Bs. 60",
+    image: "/images/postrevaso/postrevaso.jpg",
+    tag: "Favorito",
+  },
+  {
+    name: "Tortas Temáticas",
+    description: "Torta personalizada con la temática de tu elección, ideal para cumpleaños.",
+    price: "Desde Bs. 180",
+    image: "/images/tortastematicas/tortatem1.jpeg",
+    tag: "Premium",
+  },
+  {
+    name: "Pay",
+    description: "Pay de limón con base de galleta y cobertura de merengue italiano, un clásico irresistible.",
+    price: "Desde Bs. 40",
+    image: "/images/pay/pay.jpeg",
+    tag: "Nuevo",
+  },
+  {
+    name: "Roscas",
+    description: "Roscas rellenas de crema cubiertas con chocolate blanco y decoración artesanal.",
+    price: "Desde Bs. 45",
+    image: "/images/roscas/rosca.jpeg",
+    tag: "Especial",
+  },
+  {
+    name: "Postre",
+    description: "lore ipsum xd",
     price: "Desde Bs. 25",
-    emoji: "🍰",
+    image: "/images/postre/postre.jpeg",
     tag: "Mini",
-    bg: "from-pastel-rose to-pastel-peach",
   },
 ];
 
@@ -74,14 +68,16 @@ export default function Products() {
               className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-pastel-pink/20"
             >
               {/* Product visual */}
-              <div className={`bg-gradient-to-br ${product.bg} p-8 text-center relative overflow-hidden`}>
+              <div className="relative overflow-hidden h-48">
                 {/* Tag */}
-                <span className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm text-pastel-hot text-xs font-bold px-3 py-1 rounded-full">
+                <span className="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm text-pastel-hot text-xs font-bold px-3 py-1 rounded-full">
                   {product.tag}
                 </span>
-                <span className="text-7xl block group-hover:scale-125 transition-transform duration-500">
-                  {product.emoji}
-                </span>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
 
               {/* Product info */}
