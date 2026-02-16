@@ -39,17 +39,6 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-
-          {/* CTA Desktop */}
-          <a
-            href="https://wa.me/59170000000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 bg-pastel-hot text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-pastel-magenta transition-colors shadow-lg hover:shadow-xl"
-          >
-            🧁 Pedir Ahora
-          </a>
-
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -84,14 +73,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="https://wa.me/59170000000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-center bg-pastel-hot text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-pastel-magenta transition-colors mt-2"
-          >
-            🧁 Pedir Ahora
-          </a>
         </div>
       </div>
     </nav>
