@@ -54,32 +54,32 @@ export default function Footer() {
             </h4>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/fresalicius"
+                href="https://www.instagram.com/fresalicius_by_mel_campero/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pastel-hot transition-colors text-lg"
               >
-                📸
+                <img src="/images/instagram-icon.svg" alt="Instagram" className="w-5 h-5" />
               </a>
               <a
-                href="https://www.facebook.com/fresalicius"
+                href="https://www.facebook.com/profile.php?id=61568543887925"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pastel-hot transition-colors text-lg"
               >
-                👍
+                <img src="/images/facebook-icon.svg" alt="Facebook" className="w-5 h-5" />
               </a>
               <a
-                href="https://wa.me/59170000000"
+                href="https://wa.me/59179324685"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pastel-hot transition-colors text-lg"
               >
-                📱
+                <img src="/images/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5" />
               </a>
             </div>
             <p className="text-white/40 text-sm mt-6">
-              Santa Cruz, Bolivia 🇧🇴
+              Cochabamba, Bolivia
             </p>
           </div>
         </div>
