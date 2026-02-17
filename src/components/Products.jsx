@@ -43,6 +43,19 @@ const products = [
   },
 ];
 
+function getGreeting() {
+  const hour = new Date().getHours();
+  if (hour >= 6 && hour < 12) return "Buen día";
+  if (hour >= 12 && hour < 18) return "Buenas tardes";
+  return "Buenas noches";
+}
+
+function buildWhatsAppUrl(productName) {
+  const greeting = getGreeting();
+  const message = `${greeting}, quisiera realizar un pedido de ${productName}.`;
+  return `https://wa.me/59179324685?text=${encodeURIComponent(message)}`;
+}
+
 export default function Products() {
   return (
     <section id="productos" className="py-20 sm:py-28 bg-gradient-to-b from-pastel-white via-pastel-cream to-pastel-white">
@@ -91,12 +104,12 @@ export default function Products() {
                 <div className="flex items-center justify-between">
                   <span className="text-pastel-hot font-bold text-lg">{product.price}</span>
                   <a
-                    href="https://wa.me/59170000000"
+                    href={buildWhatsAppUrl(product.name)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-pastel-hot text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-pastel-magenta transition-colors"
                   >
-                    Pedir 💬
+                    Pedir
                   </a>
                 </div>
               </div>
@@ -108,12 +121,12 @@ export default function Products() {
         <div className="text-center mt-14">
           <p className="text-pastel-text/60 mb-4">¿No encuentras lo que buscas?</p>
           <a
-            href="https://wa.me/59170000000"
+            href={buildWhatsAppUrl("un pedido personalizado")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-pastel-dark text-white px-8 py-3.5 rounded-full font-semibold hover:bg-pastel-hot transition-colors shadow-lg"
           >
-            📩 Consultar por Pedidos Especiales
+          Consultar por Pedidos Personalizados
           </a>
         </div>
       </div>
