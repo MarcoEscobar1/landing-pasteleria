@@ -41,13 +41,13 @@ export default function Hero() {
             href="#productos"
             className="bg-pastel-hot text-white px-8 py-3.5 rounded-full font-semibold text-lg hover:bg-pastel-magenta transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            🍰 Ver Productos
+            Ver Productos
           </a>
           <a
             href="#contacto"
             className="border-2 border-pastel-hot text-pastel-hot px-8 py-3.5 rounded-full font-semibold text-lg hover:bg-pastel-hot hover:text-white transition-all duration-300"
           >
-            📩 Contáctanos
+            Contáctanos
           </a>
         </div>
       </div>
