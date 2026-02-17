@@ -1,22 +1,22 @@
 export default function About() {
   const features = [
     {
-      icon: "🍓",
+      icon: "/images/iconos/fresaicono.png",
       title: "Ingredientes Frescos",
       description: "Seleccionamos los mejores ingredientes naturales para cada una de nuestras creaciones.",
     },
     {
-      icon: "🎨",
-      title: "Diseños Únicos",
-      description: "Cada postre es una obra de arte personalizada según tu ocasión especial.",
+      icon: "/images/iconos/dise\u00f1oicono.png",
+      title: "Dise\u00f1os \u00danicos",
+      description: "Cada postre es una obra de arte personalizada seg\u00fan tu ocasi\u00f3n especial.",
     },
     {
-      icon: "💝",
+      icon: "/images/iconos/corazonicono.webp",
       title: "Hecho con Amor",
-      description: "Ponemos corazón y pasión en cada detalle de nuestros productos artesanales.",
+      description: "Ponemos coraz\u00f3n y pasi\u00f3n en cada detalle de nuestros productos artesanales.",
     },
     {
-      icon: "⏰",
+      icon: "/images/iconos/relojicono.png",
       title: "Entrega Puntual",
       description: "Nos comprometemos a que tus pedidos lleguen frescos y a tiempo.",
     },
@@ -71,14 +71,14 @@ export default function About() {
               acompañados de sabores excepcionales.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="bg-pastel-pink text-pastel-hot px-4 py-2 rounded-full text-sm font-medium">
-                🎂 Tortas Personalizadas
+              <span className="bg-pastel-pink text-pastel-hot px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-1">
+                <img src="/images/iconos/tortaicono.png" alt="Torta" className="w-5 h-5" /> Tortas Personalizadas
               </span>
-              <span className="bg-pastel-lavender text-pastel-dark px-4 py-2 rounded-full text-sm font-medium">
-                🧁 Cupcakes
+              <span className="bg-pastel-lavender text-pastel-dark px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-1">
+                <img src="/images/iconos/cupcakeicono.png" alt="Cupcake" className="w-5 h-5" /> Cupcakes
               </span>
-              <span className="bg-pastel-peach text-pastel-hot px-4 py-2 rounded-full text-sm font-medium">
-                🍰 Postres Variados
+              <span className="bg-pastel-peach text-pastel-hot px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-1">
+                <img src="/images/iconos/postreicono.png" alt="Postre" className="w-5 h-5" /> Postres Variados
               </span>
             </div>
           </div>
@@ -91,9 +91,7 @@ export default function About() {
               key={index}
               className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-pastel-pink/30 group"
             >
-              <span className="text-4xl block mb-4 group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
-              </span>
+              <img src={feature.icon} alt={feature.title} className="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h4 className="font-heading text-lg font-bold text-pastel-dark mb-2">
                 {feature.title}
               </h4>
