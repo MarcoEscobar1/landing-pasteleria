@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const images = [
   { src: "/images/tortas/torta.jpeg", label: "Torta de cumpleaños" },
   { src: "/images/cupcake/cupcake.jpg", label: "Cupcakes artísticos" },
@@ -10,6 +12,8 @@ const images = [
 ];
 
 export default function Gallery() {
+  const [selected, setSelected] = useState(null);
+
   return (
     <section id="galeria" className="py-20 sm:py-28 bg-pastel-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,6 +35,7 @@ export default function Gallery() {
           {images.map((item, index) => (
             <div
               key={index}
+              onClick={() => setSelected(item)}
               className="group relative rounded-2xl overflow-hidden aspect-square shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer"
             >
               <img
@@ -63,6 +68,34 @@ export default function Gallery() {
           </a>
         </div>
       </div>
+
+      {/* Lightbox modal */}
+      {selected && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 animate-fade-in-up"
+          onClick={() => setSelected(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute -top-10 right-0 text-white text-3xl font-bold hover:text-pastel-hot transition-colors"
+            >
+              ✕
+            </button>
+            <img
+              src={selected.src}
+              alt={selected.label}
+              className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
+            />
+            <p className="text-white font-heading font-semibold text-lg mt-4">
+              {selected.label}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
